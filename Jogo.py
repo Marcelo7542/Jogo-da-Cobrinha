@@ -7,8 +7,8 @@ window.resizable(False,False)
 
 pontos = 0
 direção = "Direita"
-largura_jogo = 700
-altura_jogo = 700
+largura_jogo = 600
+altura_jogo = 600
 tamanho = 30
 partes = 3
 
@@ -141,15 +141,16 @@ turno(comida,cobra)
 window.mainloop()
 
 
-largura_window = window.winfo_width()
-altura_window = window.winfo_height()
 largura_tela = window.winfo_screenwidth()
 altura_tela = window.winfo_screenheight()
-x = int((largura_window / 2) - (largura_tela / 2))
-y = int((altura_window / 2) - (altura_tela / 2))
 
+largura_janela = window.winfo_width()
+altura_janela = window.winfo_height()
 
-window.geometry(f'{largura_window}x{altura_window}+{x}+{y}')
+x = int((largura_tela / 2) - (largura_janela / 2))
+y = int((altura_tela / 2) - (altura_janela / 2))
+
+window.geometry(f'{largura_janela}x{altura_janela}+{x}+{y}')
 
 
 
